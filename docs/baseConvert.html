@@ -1,0 +1,22 @@
+<html>
+<head>
+	<meta charset="UTF-8"/>
+</head>
+<body>
+	<script type="text/javascript">
+
+	function baseConvert(forConvert){
+		number = forConvert.value;
+
+		document.getElementById("binary_text").innerHTML =Number.parseInt(number).toString(2);
+		document.getElementById("decimal_text").innerHTML =Number.parseInt(number).toString(10);
+		document.getElementById("hex_text").innerHTML =Number.parseInt(number).toString(16);
+	}
+	</script>
+	<input type="number" size="5" maxlength="3" onchange="baseConvert(this)" />
+	<div>Binary number<span id="binary_text"></span></div>
+	<div>Decimal number<span id="decimal_text"></span></div>
+	<div>Hexadecimal number:<span id="hex_text"></span></div>
+
+</body>
+</html>
